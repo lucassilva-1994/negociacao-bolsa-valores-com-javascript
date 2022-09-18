@@ -52,15 +52,9 @@
     <script src="./js/app/models/Negociacao.js"></script>
     <script>
         //Criando o objeto
-        var n1 = new Negociacao();
-        //Atribuindo um novo valor ao atributo quantidade
-        //Iniciado com 0 na classe Negociacao
-        n1.quantidade = 40;
-        console.log(n1);
-
-        var n2 = new Negociacao();
-        n2.quantidade = 50;
-        console.log(n2)
+        //Criando objeto já informando os valores no construtor.
+        var n1 = new Negociacao(new Date(),5,750);
+        console.log(n1.obterVolume());
     </script>
 </body>
 </html>
