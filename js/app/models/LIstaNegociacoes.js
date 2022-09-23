@@ -12,6 +12,6 @@ class ListaNegociacoes{
     //Criando método para retornar as negociações
 
     get negociacoes(){
-        return this._negociacoes;
+        return [].concat(this._negociacoes);
     }
 }
