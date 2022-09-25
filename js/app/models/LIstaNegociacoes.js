@@ -14,4 +14,9 @@ class ListaNegociacoes{
     get negociacoes(){
         return [].concat(this._negociacoes);
     }
+
+    //Ao chamar o método esvazia será chamado um novo array vázio.
+    esvazia(){
+        this._negociacoes = [];
+    }
 }

@@ -28,6 +28,14 @@ class NegociacaoController{
         this._limpaFormulario();
     }
 
+    //Método responsável por apagar todas as negociações.
+    apaga(){
+        this._listaNegociacoes.esvazia();
+        this._negociacoesView.update(this._listaNegociacoes);
+        this._mensagem.texto = "Negociações apagadas com sucesso.";
+        this._mensagemView.update(this._mensagem);
+    }
+
     //Método responsável por limpar o formulário após a negociação ser concluída.
     _limpaFormulario(){
         //Atribuindo valores padrões
