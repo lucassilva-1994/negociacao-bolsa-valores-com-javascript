@@ -1,11 +1,11 @@
-class NegociacoesView{
+class NegociacoesView extends View{
     constructor(elemento){
-        this._elemento = elemento;
+        super(elemento);
     }
 
     //Na linha 21 até o linha 30 está sendo percorrido todas as negociações
     //A cada negociação realizada é criada uma nova TR na tabela.
-    _template(model){
+    template(model){
         return `
                     <table class="table table-hover table-bordered">
                                     <thead>
@@ -39,9 +39,5 @@ class NegociacoesView{
                                     </tfoot>
                     </table>
         `;
-    }
-
-    update(model){
-        this._elemento.innerHTML = this._template(model);
     }
 }
