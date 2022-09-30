@@ -11,7 +11,7 @@ class NegociacaoService {
                                     .map(objeto => new Negociacao(new Date(objeto.data), objeto.quantidade, objeto.valor)));
                             } else {
                                 console.log(xhr.responseText);
-                                reject('Não foi possível obter as negociações da semana');
+                                reject('Não foi possível obter as negociações da semana.');
                             }  
                         }
                     }
@@ -30,7 +30,7 @@ class NegociacaoService {
                             .map(objeto => new Negociacao(new Date(objeto.data), objeto.quantidade, objeto.valor)));
                     } else {
                         console.log(xhr.responseText);
-                        reject('Não foi possível obter as negociações da semana');
+                        reject('Não foi possível obter as negociações da semana anterior.');
                     }  
                 }
             }
@@ -49,7 +49,7 @@ class NegociacaoService {
                             .map(objeto => new Negociacao(new Date(objeto.data), objeto.quantidade, objeto.valor)));
                     } else {
                         console.log(xhr.responseText);
-                        reject('Não foi possível obter as negociações da semana');
+                        reject('Não foi possível obter as negociações da semana retrasada.');
                     }  
                 }
             }
