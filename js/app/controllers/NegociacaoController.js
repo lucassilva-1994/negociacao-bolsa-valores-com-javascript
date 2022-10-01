@@ -1,6 +1,5 @@
 class NegociacaoController{
     constructor() {
-
         let $ = document.querySelector.bind(document);
         this._inputData = $('#data');
         this._inputQuantidade = $('#quantidade');
@@ -18,9 +17,6 @@ class NegociacaoController{
 
     adiciona(event){
         event.preventDefault();
-        //Chamando o método estático textoParaData
-        //let data = DateHelper.textoParaData(this._inputData.value);
-
         this._listaNegociacoes.adiciona(this._criaNegociacao());
         this._mensagem.texto = 'Negociacao adicionada com sucesso.';
         this._limpaFormulario();
@@ -28,7 +24,6 @@ class NegociacaoController{
 
     importaNegociacoes() {
         let service = new NegociacaoService();
-
         Promise.all([
             service.obterNegociacoesDaSemana(),
             service.obterNegociacoesDaSemanaAnterior(),
